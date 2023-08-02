@@ -1,0 +1,8 @@
+#!/bin/sh
+
+#Commit changes
+git add .
+git commit
+
+# switch
+sudo nixos-rebuild switch --flake .#$1

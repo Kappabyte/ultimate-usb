@@ -1,0 +1,3 @@
+[submodule "grub-theme"]
+	path = grub-theme
+	url = https://github.com/bobafetthotmail/refind-theme-regular

@@ -1,0 +1,10 @@
+require("avery.settings")
+require("avery.remap")
+
+require("avery.plugins.tree")
+require("avery.plugins.color")
+require("avery.plugins.bar")
+require("avery.plugins.telescope")
+require("avery.plugins.treesitter")
+require("avery.plugins.undotree")
+require("avery.plugins.lsp")
