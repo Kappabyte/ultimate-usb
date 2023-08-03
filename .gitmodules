@@ -1,3 +1,6 @@
-[submodule "grub-theme"]
-	path = grub-theme
+[submodule "refind-theme"]
+	path = refind-theme
 	url = https://github.com/bobafetthotmail/refind-theme-regular
+[submodule "ventoy-theme"]
+	path = ventoy-theme
+	url = https://github.com/jfcherng/Ventoy-theme-poly-dark

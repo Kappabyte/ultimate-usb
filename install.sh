@@ -187,6 +187,10 @@ echo Installing rEFInd
 refind-install --usedefault $bootpart
 cp ./refind.conf ./mnt/boot/EFI/BOOT/refind.conf
 
+(
+    echo ./mnt/boot/EFI/BOOT/
+)
+
 umount ./mnt/mnt/storage
 umount ./mnt/nix
 umount ./mnt/home
