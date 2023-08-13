@@ -88,7 +88,7 @@ mount /dev/disk/by-label/VTOYEFI ./ventoyefi --mkdir
 
 if [[ $medicat == "y" ]]; then
     clear
-    URL=https://mirror.fangshdow.trade/medicat-usb/MediCat%20USB%20v21.12/MediCat.USB.v21.12.7z
+    URL=https://mirrors.itrio.xyz/unpacked/MediCat.USB.v21.12.7z
     FILE=$(basename $URL)
 
     # Download the medicat binary if it doesn't already exist
@@ -112,8 +112,8 @@ mkdir ./ventoy/ventoy/theme/legacy
 mkdir ./ventoy/ventoy/theme/uefi
 
 cp ventoy.json ./ventoy/ventoy/
-cp -r ./grub-theme/src/* ./ventoy/ventoy/theme/legacy/
-cp -r ./grub-theme/src/* ./ventoy/ventoy/theme/uefi/
+cp -r ./ventoy-theme/disk_root/ventoy/theme/poly-dark/* ./ventoy/ventoy/theme/legacy/
+cp -r ./ventoy-theme/disk_root/ventoy/theme/poly-dark/* ./ventoy/ventoy/theme/uefi/
 
 rm -f ./ventoyefi/EFI/BOOT/BOOT*.EFI
 
@@ -188,8 +188,14 @@ refind-install --usedefault $bootpart
 cp ./refind.conf ./mnt/boot/EFI/BOOT/refind.conf
 
 (
-    echo ./mnt/boot/EFI/BOOT/
-)
+    echo $(pwd)/mnt/boot/EFI/BOOT/
+    echo 2
+    echo 2
+    echo
+    echo
+) | ./refind-theme/install.sh
+
+sleep 5
 
 umount ./mnt/mnt/storage
 umount ./mnt/nix
